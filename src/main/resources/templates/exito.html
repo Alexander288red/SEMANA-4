@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Registro Exitoso</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f9ff; /* Fondo suave azul claro */
+            color: #333; /* Texto oscuro */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Contenedor principal */
+        .container {
+            background-color: #ffffff; /* Fondo blanco */
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 700px;
+            text-align: center;
+            font-size: 1.1em;
+        }
+
+        h1 {
+            color: #007bff; /* Título azul */
+            font-size: 3em;
+            font-weight: 700;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+        }
+
+        p {
+            margin: 12px 0;
+        }
+
+        strong {
+            font-weight: bold;
+            color: #007bff; /* Resaltar las etiquetas en azul */
+        }
+
+        span {
+            color: #555; /* Color de texto normal */
+        }
+
+        /* Estilo de botones */
+        .button {
+            background-color: #007bff; /* Botón azul */
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1em;
+            text-transform: uppercase;
+            margin-top: 30px;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Efecto hover del botón */
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>¡Registro Realizado exitosamente!</h1>
+        <p><strong>Nombre:</strong> <span th:text="${alumno.nombre}"></span></p>
+        <p><strong>Apellido Paterno:</strong> <span th:text="${alumno.apellidoPaterno}"></span></p>
+        <p><strong>Apellido Materno:</strong> <span th:text="${alumno.apellidoMaterno}"></span></p>
+        <p><strong>Fecha de Nacimiento:</strong> <span th:text="${alumno.fechaNacimiento}"></span></p>
+        <p><strong>Lugar de Residencia:</strong> <span th:text="${alumno.lugarResidencia}"></span></p>
+        <p><strong>Edad:</strong> <span th:text="${alumno.edad}"></span></p>
+        <p><strong>Teléfono:</strong> <span th:text="${alumno.telefono}"></span></p>
+        <p><strong>Correo Electrónico:</strong> <span th:text="${alumno.correoElectronico}"></span></p>
+
+        <!-- Botón para ir a otra página o acción -->
+        <button class="button" onclick="window.location.href='/home'">Volver al inicio</button>
+    </div>
+</body>
+</html>
